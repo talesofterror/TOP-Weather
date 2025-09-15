@@ -1,7 +1,10 @@
 export function hydrate (elements, report) {
 
 	// present
-	elements.present.icon.textContent = report.currentConditions.icon
+	let presentIcon = document.createElement("img")
+	import(`./assets/vcrossingIcons/${report.currentConditions.icon}.svg`)
+		.then( (s) => presentIcon.src = s.default )
+	elements.present.icon.append(presentIcon)
 	elements.present.temp.textContent = report.currentConditions.temp
 	elements.present.tempmax.textContent = report.currentConditions.tempmax
 	elements.present.tempmin.textContent = report.currentConditions.tempmin
