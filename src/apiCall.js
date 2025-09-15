@@ -14,10 +14,10 @@ export async function getReport (query, testRun = false) {
 		json = testRun? testData : response.json()
 		return {
 			currentConditions: {
-				icon: json.currentConditions.icon, 
+				icon: json.currentConditions.icon,
 				temp: json.currentConditions.temp,
-				tempmax: json.currentConditions.tempmax,
-				tempmin: json.currentConditions.tempmin,
+				tempmax: json.days[0].tempmax,
+				tempmin: json.days[0].tempmin,
 				conditions: json.currentConditions.conditions,
 				humidity: json.currentConditions.humidity,
 			},

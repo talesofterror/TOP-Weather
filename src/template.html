@@ -3,10 +3,39 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>~~</title>
+		<title>The Weather</title>
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
+
+		<div class="container">
+			<div class="present-conditions container-item"> <!-- flex row -->
+				<div class="present-main"> <!-- flex column -->
+					<div id="present-icon"></div>
+					<div id="present-conditions"></div>
+				</div>
+				<div class="present-details"> <!-- flex column -->
+					<div id="present-temp"></div>
+					<div class="present-temp-range"> <!-- flex row -->
+						<div id="present-tempmin"></div>
+						<div id="present-tempmax"></div>
+					</div>
+					<div id="present-humidity"></div>
+				</div>
+			</div>
+
+			<div class="future-conditions container-item"> <!-- flex row -->
+				<div class="future-day"> <!-- flex column -->
+					<div id="future-1-icon" class="future-icon"></div>
+					<div id="future-1-temp" class="future-temp"></div>
+				</div>
+				<div class="future-day">
+					<div id="future-2-icon" class="future-icon"></div>
+					<div id="future-2-temp" class="future-temp"></div>
+				</div>
+
+			</div>
+		</div>
 
 	</body>
 </html>
