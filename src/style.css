@@ -1,3 +1,8 @@
+* {
+	box-sizing: border-box;
+	border: 1px solid #f80;	
+}
+
 body {
 	box-sizing: border-box;
 	display: flex;
@@ -23,15 +28,75 @@ body {
 }
 
 .container-item {
-
+	width: 100%;
 }
 
 .present-conditions {
 	flex-grow: 2;
+	display: flex;
+	flex-direction: row;
 	border: 1px solid blue;
+}
+
+.present-conditions img {
+	
+}
+
+.present-main {
+	flex-grow: 3;
+	display: flex;
+	flex-direction: column;
+}
+
+#present-icon {
+	flex-grow: 6;
+}
+
+#present-conditions {
+	flex-grow: 1;
+}
+
+.present-details {
+	flex-grow: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.present-temp-range {
+	display: flex;
+	flex-direction: row;
 }
 
 .future-conditions {
 	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
 	border: 1px solid rebeccapurple;
+}
+
+.future-conditions img {
+
+}
+
+.future-day {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.future-day div:first-child {
+	flex-grow: 6;
+}
+.future-day div:last-child {
+	flex-grow: 1;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
 }

@@ -2,7 +2,7 @@ import testData from "./assets/weatherRefData.json"
 
 let weatherRequestUrl = (query) => `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/`
 	+ query
-	+ `?unitGroup=us&key=GKRUZWJ6T7MMYA9ZMP78HA9DL&contentType=json`
+	+ `?unitGroup=us&key=GKRUZWJ6T7MMYA9ZMP78HA9DL&contentType=json&iconsSet=icons2`
 
 export async function getReport (query, testRun = false) {
 	let response
@@ -10,8 +10,9 @@ export async function getReport (query, testRun = false) {
 	try {
 		if (!testRun) {
 			response = await fetch(weatherRequestUrl(query))
+			console.log("live request (o_o;)")
 		}
-		json = testRun? testData : response.json()
+		json = testRun? testData : await response.json()
 		return {
 			currentConditions: {
 				icon: json.currentConditions.icon,
@@ -37,8 +38,8 @@ export async function getReport (query, testRun = false) {
 		console.log(response)
 		console.log("json:")
 		console.log(json)
-		console.log(json.days[0].temp)
-		console.log(json.days[1].temp)
+		console.log(json.days[0].tempmin)
+		// console.log(json.days[1].temp)
 		console.log("error: ")
 		throw new Error(e)
 	}
