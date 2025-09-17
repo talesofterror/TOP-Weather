@@ -9,29 +9,35 @@
 	<body>
 
 		<div class="container">
-			<div class="present-conditions container-item"> <!-- flex row -->
-				<div class="present-main"> <!-- flex column -->
+			<div class="present-conditions container-item">
+				<div class="present-main">
 					<div id="present-icon"></div>
 					<div id="present-conditions"></div>
 				</div>
-				<div class="present-details center-flex"> <!-- flex column -->
-					<div id="present-temp"></div>
-					<div class="present-temp-range flex-row"> <!-- flex row -->
-						<div class="present-temp-range-item flex-column">
-							<h2>Min Temp:</h2>
+				<div class="present-details-container">
+					<div class="present-details-temp-container">
+						<div class="present-temp-header">Current Temperature</div>
+						<div class="present-temp-value" id="present-temp"></div>
+					</div>
+					<div class="present-temp-range-container">
+						<div class="present-temp-range-item">
+							<div class="range-header">Min Temp</div>
 							<div id="present-tempmin"></div>
 						</div>
-						<div class="present-temp-range-item flex-column">
-							<h2>Max Temp:</h2>
+						<div class="present-temp-range-item">
+							<div class="range-header">Max Temp</div>
 							<div id="present-tempmax"></div>
 						</div>
 					</div>
-					<div id="present-humidity"></div>
+					<div class="present-humid-container">
+						<div class="present-humid-header">Humidity</div>
+						<div class="present-humid-value" id="present-humidity"></div>
+					</div>
 				</div>
 			</div>
 
-			<div class="future-conditions container-item"> <!-- flex row -->
-				<div class="future-day"> <!-- flex column -->
+			<div class="future-conditions container-item">
+				<div class="future-day">
 					<div id="future-1-icon" class="future-icon"></div>
 					<div id="future-1-temp" class="future-temp"></div>
 				</div>
