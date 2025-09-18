@@ -29,6 +29,7 @@ body {
 	flex-direction: column;
 	width: fit-content;
 	min-width: 50%;
+	max-height: 100vh;
 	margin: auto;
 	margin-top: 1rem;
 	gap:1rem;
