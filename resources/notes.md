@@ -20,3 +20,11 @@ two day forecast (json.days[1] & days[2])
     - temp
     - weather icon
 
+
+~
+
+needed: 
+
+- what happens when the user uses a stupid request?
+    - dialogue box or absolute element
+        - "Not like that!"

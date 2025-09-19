@@ -15,6 +15,7 @@ export async function getReport (query, testRun = false) {
 		json = testRun? testData : await response.json()
 		return {
 			currentConditions: {
+				datetime: json.days[0].datetime,
 				icon: json.currentConditions.icon,
 				temp: json.currentConditions.temp,
 				tempmax: json.days[0].tempmax,
@@ -24,10 +25,12 @@ export async function getReport (query, testRun = false) {
 			},
 			days: [
 				{
+					datetime: json.days[1].datetime,
 					temp: json.days[1].temp,
 					icon: json.days[1].icon
 				},
 				{
+					datetime: json.days[2].datetime,
 					temp: json.days[2].temp,
 					icon: json.days[2].icon
 				}

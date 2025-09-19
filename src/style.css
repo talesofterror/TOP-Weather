@@ -4,6 +4,9 @@
 	--accent-bg: #44d;
 	--primary-text: var(--accent-bg);
 	--accent-text: var(--primary-bg);
+	--highlight-bg: #f63;
+	--highlight-text: var(--accent-bg);
+	--highlight-border: #d63;
 }
 
 * {
@@ -31,7 +34,7 @@ body {
 	min-width: 50%;
 	max-height: 100vh;
 	margin: auto;
-	margin-top: 1rem;
+	margin-top: 3rem;
 	gap:1rem;
 }
 
@@ -39,23 +42,59 @@ body {
 	width: 100%;
 }
 
+.input-container {
+	position: absolute;
+	top: -2rem;
+}
+
+:root {
+	--input-radius: 1rem;
+}
+
+label {
+	width: fit-content;
+	padding: 0.02rem;
+	padding-left: 0.5rem;
+	background-color: var(--highlight-bg);
+	border-radius: var(--input-radius);
+}
+
+input {
+	appearance: none;
+	-webkit-appearance: none;
+	display: inline;
+	width: 10rem;
+	background: var(--primary-bg);
+	color: var(--primary-text);
+	border: 0;
+	border-left: 0.1rem solid var(--primary-text);
+	border-bottom: 0.1rem solid var(--primary-text);
+	border-radius: var(--input-radius);
+}
+
+label,input {
+	font-size: 0.7rem;
+	/* background-color: var(--highlight-bg); */
+	color: var(--highlight-text);
+}
+input::placeholder {
+	color: var(--highlight-bg);
+}
+
 .present-conditions {
+	position: relative;
 	flex-grow: 2;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content:center;
 	min-height: 20rem;
+	max-height: fit-content;
 	background-color: var(--primary-bg);
 	border: 3px solid var(--accent-bg);
 	border-radius: 1.5vw;
 	gap: 1rem;
-	padding: 1rem;
-}
-
-.present-conditions img {
-	width: 100%;
-	height: 100%;
+	padding: 0.3rem;
 }
 
 .present-main {
@@ -67,15 +106,22 @@ body {
 	max-width: 55%;
 }
 
-.present-main div {
-	/* width: 100%; */
-}
-
 #present-icon {
 	box-sizing: border-box;
 	flex-grow: 6;
-	min-width: 100%;
-	max-height: fit-content;
+	width: 100%;
+	min-height: 42%;
+	max-height: 45%;
+	background-color: var(--highlight-bg);
+	border: var(--highlight-border) 3px solid;
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.present-conditions img {
+	width: 100%;
+	/* max-width: 75%; */
+	min-height: 100%;
 }
 
 .present-details-container {

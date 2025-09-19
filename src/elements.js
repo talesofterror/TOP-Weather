@@ -1,5 +1,6 @@
 export const elements = {
 	present: {
+		header: document.getElementById("present-header"),
 		icon: document.getElementById("present-icon"),
 		conditions: document.getElementById("present-conditions"),
 		temp: document.getElementById("present-temp"),
@@ -9,10 +10,12 @@ export const elements = {
 	},
 	future: [
 		{
+			header: document.getElementById("future-1-header"),
 			icon: document.getElementById("future-1-icon"),
 			temp: document.getElementById("future-1-temp")
 		},
 		{
+			header: document.getElementById("future-2-header"),
 			icon: document.getElementById("future-2-icon"),
 			temp: document.getElementById("future-2-temp")
 		}
