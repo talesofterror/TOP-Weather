@@ -3,5 +3,5 @@ import { elements } from "./elements.js"
 import { hydrate } from "./hydrator.js"
 import "./style.css"
 
-hydrate(elements, await getReport("19119", false))
+hydrate(elements, await getReport("19119", true))
 
