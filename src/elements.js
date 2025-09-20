@@ -1,6 +1,14 @@
+
+let markerElement = (marker) => {
+	let element = document.createElement("img")
+	element.src = marker
+	return element
+}
+
 export const elements = {
 	present: {
-		header: document.getElementById("present-header"),
+		date: document.getElementById("present-date"),
+		location: document.getElementById("present-location"),
 		icon: document.getElementById("present-icon"),
 		conditions: document.getElementById("present-conditions"),
 		temp: document.getElementById("present-temp"),

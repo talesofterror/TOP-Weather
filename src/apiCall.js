@@ -13,9 +13,11 @@ export async function getReport (query, testRun = false) {
 			console.log("live request (o_o;)")
 		}
 		json = testRun? testData : await response.json()
+		console.log(json)
 		return {
 			currentConditions: {
-				datetime: json.days[0].datetime,
+				datetime: json.days[0].datetimeEpoch,
+				location: json.resolvedAddress,
 				icon: json.currentConditions.icon,
 				temp: json.currentConditions.temp,
 				tempmax: json.days[0].tempmax,

@@ -4,9 +4,7 @@
 	--accent-bg: #44d;
 	--primary-text: var(--accent-bg);
 	--accent-text: var(--primary-bg);
-	--highlight-bg: #f63;
-	--highlight-text: var(--accent-bg);
-	--highlight-border: #d63;
+	--highlight: #f5b952;
 }
 
 * {
@@ -32,7 +30,7 @@ body {
 	flex-direction: column;
 	width: fit-content;
 	min-width: 50%;
-	max-height: 100vh;
+	max-height: 100%;
 	margin: auto;
 	margin-top: 3rem;
 	gap:1rem;
@@ -55,7 +53,7 @@ label {
 	width: fit-content;
 	padding: 0.02rem;
 	padding-left: 0.5rem;
-	background-color: var(--highlight-bg);
+	background-color: var(--primary-text);
 	border-radius: var(--input-radius);
 }
 
@@ -75,10 +73,10 @@ input {
 label,input {
 	font-size: 0.7rem;
 	/* background-color: var(--highlight-bg); */
-	color: var(--highlight-text);
+	color: var(--accent-text);
 }
 input::placeholder {
-	color: var(--highlight-bg);
+	color: var(--accent-bg);
 }
 
 .present-conditions {
@@ -89,7 +87,7 @@ input::placeholder {
 	align-items: center;
 	justify-content:center;
 	min-height: 20rem;
-	max-height: fit-content;
+	/* max-height: fit-content; */
 	background-color: var(--primary-bg);
 	border: 3px solid var(--accent-bg);
 	border-radius: 1.5vw;
@@ -106,22 +104,47 @@ input::placeholder {
 	max-width: 55%;
 }
 
+.present-header-container {
+	width: 100%;
+}
+
+#present-location {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background-color: var(--highlight);
+	border: 3px solid var(--accent-bg);
+	border-radius: 1rem 1rem 0 0;
+}
+
+#present-date {
+	display: flex;
+	justify-content: center;
+	background-color: var(--accent-bg);
+	color: var(--accent-text);
+	border-radius: 0 0 1rem 1rem;
+}
+
 #present-icon {
 	box-sizing: border-box;
-	flex-grow: 6;
+	flex-grow: 3;
+	display: flex;
+	justify-content: center;
 	width: 100%;
-	min-height: 42%;
-	max-height: 45%;
-	background-color: var(--highlight-bg);
-	border: var(--highlight-border) 3px solid;
+	max-height: 13rem;
+	background-color: var(--accent-bg);
+	border: var(--highlight) 3px solid;
 	border-radius: 1rem;
 	padding: 1rem;
 }
 
 .present-conditions img {
-	width: 100%;
+	/* width: 80%; */
 	/* max-width: 75%; */
-	min-height: 100%;
+	max-height: 14rem;
+	min-height: 10rem;
+	max-width: 100%;
+	/* margin: auto; */
 }
 
 .present-details-container {
@@ -247,5 +270,9 @@ input::placeholder {
 }
 .future-day div:last-child {
 	flex-grow: 1;
+}
+
+.future-day .future-header {
+	font-size: 0.8rem;
 }
 

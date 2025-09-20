@@ -2,14 +2,11 @@ import {format} from "date-fns"
 
 export function hydrate (elements, report) {
 
-	// present
-	// let presentIcon = document.createElement("img")
-	// import(`./assets/vcrossingIcons/${report.currentConditions.icon}.svg`)
-	// 	.then( (s) => presentIcon.src = s.default )
-	// elements.present.icon.append(presentIcon)
-	let presentDate = Date(report.currentConditions.datetime)
-	elements.present.header.textContent = format(presentDate, "MMMM do, yyyy")
+	let presentDate = new Date(report.currentConditions.datetime * 1000)
+	elements.present.date.textContent = format(presentDate, "MMMM do, yyyy")
+	elements.present.location.textContent = report.currentConditions.location
 	elements.present.icon.append(getIcon(report.currentConditions.icon))
+	// elements.present.icon.append(getIcon("clear-day"))
 	elements.present.temp.textContent = report.currentConditions.temp
 	elements.present.tempmax.textContent = report.currentConditions.tempmax
 	elements.present.tempmin.textContent = report.currentConditions.tempmin
