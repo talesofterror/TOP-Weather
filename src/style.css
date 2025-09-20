@@ -21,6 +21,8 @@ body {
 	background-color: var(--main-bg);
 	color: var(--primary-text);
 	padding: 0;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 	margin: 0;
 }
 
@@ -44,6 +46,8 @@ body {
 .input-container {
 	position: absolute;
 	top: -2rem;
+	display: flex;
+	max-height: 2rem;
 }
 
 :root {
@@ -51,11 +55,15 @@ body {
 }
 
 label {
+	color: var(--accent-text);
 	width: fit-content;
 	padding: 0.02rem;
 	padding-left: 0.5rem;
 	background-color: var(--primary-text);
-	border-radius: var(--input-radius);
+	border-radius: var(--input-radius) 0 0 var(--input-radius);
+	/* height: 1rem; */
+	padding: 0.3rem;
+	padding-left: 0.6rem;
 }
 
 input {
@@ -63,21 +71,29 @@ input {
 	-webkit-appearance: none;
 	display: inline;
 	width: 10rem;
+	font-weight:  700;
 	background: var(--primary-bg);
 	color: var(--primary-text);
 	border: 0;
 	border-left: 0.1rem solid var(--primary-text);
 	border-bottom: 0.1rem solid var(--primary-text);
-	border-radius: var(--input-radius);
+	border-radius: 0 var(--input-radius) var(--input-radius) 0;
+	padding: 0.3rem;
 }
 
 label,input {
 	font-size: 0.7rem;
 	/* background-color: var(--highlight-bg); */
-	color: var(--accent-text);
 }
 input::placeholder {
 	color: var(--accent-bg);
+	font-style: italic;
+	font-weight: normal;
+}
+input:focus {
+	outline: 0;
+	background-color: var(--accent-bg);
+	color: var(--highlight);
 }
 
 .present-conditions {
@@ -93,7 +109,7 @@ input::placeholder {
 	border: 3px solid var(--accent-bg);
 	border-radius: 1.5vw;
 	gap: 1rem;
-	padding: 0.3rem;
+	/* padding: 0.3rem; */
 }
 
 .present-main {
@@ -103,6 +119,9 @@ input::placeholder {
 	align-items: center;
 	justify-content: center;
 	max-width: 55%;
+	padding-left: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 .present-header-container {
@@ -117,6 +136,7 @@ input::placeholder {
 	background-color: var(--highlight);
 	border: 3px solid var(--accent-bg);
 	border-radius: 1rem 1rem 0 0;
+	padding: 0.3rem;
 }
 
 #present-date {
@@ -125,6 +145,7 @@ input::placeholder {
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
 	border-radius: 0 0 1rem 1rem;
+	padding: 0.3rem;
 }
 
 #present-icon {
@@ -157,21 +178,35 @@ input::placeholder {
 	border: 3px solid var(--accent-bg);
 	border-radius: 1rem;
 	margin-top: 0.5rem;
+	padding: 0.3rem;
 }
 
 .present-details-container {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 	max-width: 13rem;
+	min-height: 100%;
 }
 
 .present-temp-header {
+	max-width: 9rem;
+	min-width: 9rem;
+	background-color: var(--highlight);
+	border: 3px solid var(--primary-text);
+	border-radius: 1rem 1rem 0 0;
 	text-align: center;
+	padding: 0.3rem;
 }
 
 .present-temp-value {
 	font-size: 2.5rem;
+	text-align: center;
+	min-width: 9rem;
+	background-color: var(--accent-bg);
+	color: var(--accent-text);
+	border-radius: 0 0 1rem 1rem;
 }
 
 .present-details-temp-container {
@@ -179,8 +214,8 @@ input::placeholder {
 	flex-grow: 2;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	margin-bottom: 0.5rem;
+	/* justify-content: center; */
+	margin-bottom: 1rem;
 }
 
 .present-details-temp-container div {
@@ -206,7 +241,7 @@ input::placeholder {
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
 	padding: 0.4rem;
-	border-radius: 0.2rem;
+	border-radius: 1rem;
 }
 
 /*temp range header*/
@@ -230,20 +265,36 @@ input::placeholder {
 	text-align: center;
 	font-size: 140%;
 }
+
 .present-humid-container {
 	display:flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-top: 0.5rem;
+	margin-top: 1rem;
 }
 
 .present-humid-container div {
 	max-height: fit-content;
+	max-width: fit-content;
+}
+
+.present-humid-header {
+	min-width: 7rem;
+	background-color: var(--highlight);
+	border: 3px solid var(--primary-text);
+	border-radius: 1rem 1rem 0 0;
+	padding: 0.5rem;
 }
 
 .present-humid-value {
+	text-align: center;
 	font-size: 2.5rem;
+	min-width: 7rem;
+	background-color: var(--accent-bg);
+	color: var(--accent-text);
+	border-radius: 0 0 1rem 1rem;
+	padding: 0.5rem;
 }
 
 .future-conditions {
