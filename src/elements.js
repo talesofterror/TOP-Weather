@@ -1,10 +1,4 @@
 
-let markerElement = (marker) => {
-	let element = document.createElement("img")
-	element.src = marker
-	return element
-}
-
 export const elements = {
 	present: {
 		date: document.getElementById("present-date"),
