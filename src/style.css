@@ -207,7 +207,7 @@ input:focus {
 }
 
 .present-temp-value {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	text-align: center;
 	min-width: 9rem;
 	background-color: var(--accent-bg);
@@ -269,7 +269,7 @@ input:focus {
 	align-items:center;
 	justify-content:center;
 	text-align: center;
-	font-size: 140%;
+	font-size: 1.5rem;
 }
 
 .present-humid-container {
@@ -297,7 +297,7 @@ input:focus {
 
 .present-humid-value {
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	min-width: 7rem;
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
@@ -319,7 +319,7 @@ input:focus {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	max-width: 30%;
+	max-width: 50%;
 	min-height: 8rem;
 	background-color: var(--highlight);
 	border: 3px solid var(--primary-text);
@@ -328,7 +328,7 @@ input:focus {
 }
 
 .future-conditions .future-icon {
-	flex-grow: 2;
+	/* flex-grow: 1; */
 	max-width: 100%;
 	/* min-height: 100%; */
 	max-height: fit-content;
