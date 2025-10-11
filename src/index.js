@@ -3,7 +3,7 @@ import { elements } from "./elements.js"
 import { hydrate } from "./hydrator.js"
 import "./style.css"
 
-let testToggle = ()=> false
+let testToggle = ()=> true
 
 hydrate(elements, await getReport("19119", testToggle()))
 

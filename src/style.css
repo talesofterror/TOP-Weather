@@ -8,7 +8,7 @@
 }
 
 * {
-	font-size: calc(0.75rem + 0.75vw);
+	font-size: calc(0.88rem + 0.75vh);
 	box-sizing: border-box;
 }
 
@@ -16,6 +16,7 @@ body {
 	/* font-family: 'Times New Roman', Times, serif; */
 	appearance: none;
 	-webkit-appearance: none;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -33,7 +34,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
-	min-width: 50%;
+	/* min-width: 50%; */
+	mind-width: fit-content;
 	max-height: 100%;
 	margin: auto;
 	margin-top: 2rem;
@@ -115,7 +117,7 @@ input:focus {
 	border: 3px solid var(--accent-bg);
 	border-radius: 1.5vw;
 	gap: 1rem;
-	/* padding: 0.3rem; */
+	padding: 0.3rem;
 }
 
 .present-main {
@@ -125,9 +127,9 @@ input:focus {
 	align-items: center;
 	justify-content: center;
 	max-width: 55%;
-	padding-left: 0.5rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	/* padding-left: 0.5rem; */
+	/* padding-top: 0.5rem; */
+	/* padding-bottom: 0.5rem; */
 }
 
 .present-header-container {
@@ -197,8 +199,7 @@ input:focus {
 }
 
 .present-temp-header {
-	max-width: 9rem;
-	min-width: 9rem;
+	width: 100%;
 	background-color: var(--highlight);
 	border: 3px solid var(--primary-text);
 	border-radius: 1rem 1rem 0 0;
@@ -209,7 +210,7 @@ input:focus {
 .present-temp-value {
 	font-size: 2rem;
 	text-align: center;
-	min-width: 9rem;
+	width: 100%;
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
 	border-radius: 0 0 1rem 1rem;
@@ -283,12 +284,11 @@ input:focus {
 .present-humid-container div {
 	max-height: fit-content;
 	/* max-width: fit-content; */
-	min-width: 9rem;
+	width: 100%;
 }
 
 .present-humid-header {
 	text-align: center;
-	min-width: 7rem;
 	background-color: var(--highlight);
 	border: 3px solid var(--primary-text);
 	border-radius: 1rem 1rem 0 0;
@@ -298,7 +298,6 @@ input:focus {
 .present-humid-value {
 	text-align: center;
 	font-size: 2rem;
-	min-width: 7rem;
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
 	border-radius: 0 0 1rem 1rem;
@@ -321,7 +320,7 @@ input:focus {
 	justify-content: space-around;
 	max-width: 50%;
 	min-height: 8rem;
-	background-color: var(--highlight);
+	background-color: var(--primary-bg);
 	border: 3px solid var(--primary-text);
 	border-radius: 1rem;
 	overflow: hidden;
@@ -376,11 +375,51 @@ input:focus {
 		font-size: 20px;
 	}
 
+	* {
+		font-size: calc(0.50rem + 0.75vw);
+		box-sizing: border-box;
+	}
+
 	.input-container {
 		display: flex;
 		width: 100%;
 	}
 	.input-container * {
 		flex-grow: 1;
+	}
+
+	.present-conditions {
+		gap: 0.5rem;
+		border-radius: 1.5rem;
+	}
+
+	.present-main {
+		flex-grow: 2;
+		min-width: 60%;
+	}
+
+	.present-temp-value {
+		font-size: 1.4rem;
+	}
+
+	.present-humid-value {
+		font-size: 1.4rem;
+	}
+
+	.present-details-container {
+		max-width: 40%;
+	}
+
+	.present-details-container div {
+
+	}
+
+	.future-day .future-temp {
+		font-size: 1rem;
+	}
+
+/* temp range value */
+	.present-temp-range-item div:last-child {
+		font-size: 1rem;
 	}
 }
