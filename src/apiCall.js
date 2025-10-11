@@ -4,12 +4,12 @@ let weatherRequestUrl = (query) => `https://weather.visualcrossing.com/VisualCro
 	+ query
 	+ `?unitGroup=us&key=GKRUZWJ6T7MMYA9ZMP78HA9DL&contentType=json&iconsSet=icons2`
 
-export async function getReport (query, testRun = false) {
+export async function getReport (query, testRun = false, mode = {mode: 'cors'}) {
 	let response
 	let json
 	try {
 		if (!testRun) {
-			response = await fetch(weatherRequestUrl(query))
+			response = await fetch(weatherRequestUrl(query), mode)
 			console.log("live request (o_o;)")
 		}
 		json = testRun? testData : await response.json()

@@ -1,5 +1,7 @@
 
 export const elements = {
+	form: document.getElementById("query"),
+	inputLocation: document.getElementById("input-location"),
 	present: {
 		date: document.getElementById("present-date"),
 		location: document.getElementById("present-location"),
