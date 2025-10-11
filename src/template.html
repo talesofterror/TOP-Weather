@@ -4,53 +4,54 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>The Weather</title>
+		<link rel="stylesheet" href="https://use.typekit.net/olj7zez.css">
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
 
 		<div class="container">
 			<div class="present-conditions container-item">
-				<div class="input-container"><form action="/apiquery" id="query"><label for="input-location">Set location: </label><input type="text" id="input-location" placeholder="enter a location"></form></div>
+				<div class="input-container"><form action="/apiquery" id="query"><label for="input-location"><div class="input-label font-main">Set location: </div></label><input type="text" id="input-location" class="font-accent" placeholder="enter a location"></form></div>
 				<div class="present-main">
 					<div class="present-header-container">
-						<div class="present-header" id="present-location"></div>
-						<div class="present-header" id="present-date"></div>
+						<div class="present-header font-main" id="present-location"></div>
+						<div class="present-header font-accent" id="present-date"></div>
 					</div>
 					<div id="present-icon"><img alt="" id="present-icon-img"></div>
-					<div id="present-conditions"></div>
+					<div id="present-conditions" class="font-accent"></div>
 				</div>
 				<div class="present-details-container">
 					<div class="present-details-temp-container">
-						<div class="present-temp-header">Current Temperature</div>
-						<div class="present-temp-value" id="present-temp"></div>
+						<div class="present-temp-header font-main">Current Temperature</div>
+						<div class="present-temp-value font-accent" id="present-temp"></div>
 					</div>
 					<div class="present-temp-range-container">
 						<div class="present-temp-range-item">
-							<div class="range-header">Min</div>
-							<div id="present-tempmin"></div>
+							<div class="range-header font-main">Min</div>
+							<div id="present-tempmin" class="font-accent"></div>
 						</div>
 						<div class="present-temp-range-item">
-							<div class="range-header">Max</div>
-							<div id="present-tempmax"></div>
+							<div class="range-header font-main">Max</div>
+							<div id="present-tempmax" class="font-accent"></div>
 						</div>
 					</div>
 					<div class="present-humid-container">
-						<div class="present-humid-header">Humidity</div>
-						<div class="present-humid-value" id="present-humidity"></div>
+						<div class="present-humid-header font-main">Humidity</div>
+						<div class="present-humid-value font-accent" id="present-humidity"></div>
 					</div>
 				</div>
 			</div>
 
 			<div class="future-conditions container-item">
 				<div class="future-day">
-					<div class="future-header" id="future-1-header"></div>
+					<div class="future-header font-main" id="future-1-header"></div>
 					<div id="future-1-icon" class="future-icon"><img alt="" id="future-1-icon-img"></div>
-					<div id="future-1-temp" class="future-temp"></div>
+					<div id="future-1-temp" class="future-temp font-accent"></div>
 				</div>
 				<div class="future-day">
-					<div class="future-header" id="future-2-header"></div>
+					<div class="future-header font-main" id="future-2-header"></div>
 					<div id="future-2-icon" class="future-icon"><img alt="" id="future-2-icon-img"></div>
-					<div id="future-2-temp" class="future-temp"></div>
+					<div id="future-2-temp" class="future-temp font-accent"></div>
 				</div>
 
 			</div>

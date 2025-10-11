@@ -35,4 +35,9 @@ module.exports = {
 			},
 		],
 	},
+	externals: {
+		'https://use.typekit.net/olj7zez.css': {
+
+		}
+	}
 }
