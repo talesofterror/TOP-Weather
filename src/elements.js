@@ -2,6 +2,7 @@
 export const elements = {
 	form: document.getElementById("query"),
 	inputLocation: document.getElementById("input-location"),
+	errorMessage: document.getElementById("error-message"),
 	present: {
 		date: document.getElementById("present-date"),
 		location: document.getElementById("present-location"),

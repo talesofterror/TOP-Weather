@@ -46,12 +46,14 @@ body {
 }
 
 .container {
+	position: relative;
 	font-size: 16px;
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
 	/* min-width: 50%; */
-	min-width: fit-content;
+	min-width: 40vw;
+	max-width: fit-content;
 	max-height: 100%;
 	margin: auto;
 	margin-top: 2rem;
@@ -411,6 +413,15 @@ input:-webkit-autofill:active {
 .future-day div {
 	min-width: 45%;
 	padding: 0.3rem;
+}
+
+.display-none {
+	display: none;
+}
+
+.display-absolute {
+	position: absolute;
+	display: block;
 }
 
 @media only screen and (max-width: 767px) {
