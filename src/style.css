@@ -54,7 +54,7 @@ body {
 	/* min-width: 50%; */
 	min-width: 40vw;
 	max-width: fit-content;
-	max-height: 100%;
+	max-height: 100vh;
 	margin: auto;
 	margin-top: 2rem;
 	gap:1rem;
@@ -145,8 +145,12 @@ input:-webkit-autofill:active {
 .input-wrapper {
 	flex-grow: 2;
 	background-color: var(--accent-bg);
-	/* height: 1rem; */
+}
 
+#present-date,#present-temp,
+#present-tempmax,#present-tempmin,
+#present-humidity {
+	color: var(--highlight);
 }
 
 .present-conditions {
@@ -366,7 +370,7 @@ input:-webkit-autofill:active {
 	justify-content: space-around;
 	max-width: 50%;
 	min-height: 8rem;
-	background-color: var(--primary-bg);
+	background-color: var(--primary-text);
 	border: 3px solid var(--primary-text);
 	border-radius: 1rem;
 	overflow: hidden;
@@ -374,21 +378,29 @@ input:-webkit-autofill:active {
 
 .future-conditions .future-icon {
 	/* flex-grow: 1; */
-	max-width: 100%;
+	/* max-width: 100%; */
 	/* min-height: 100%; */
-	max-height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: fit-content;
+	width: 100%;
+	background-color: var(--primary-bg);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
 
 .future-icon img {
-	min-height: 100%;
+	/* min-height: 100%; */
+	max-height: 4rem;
 }
 
 
 .future-day .future-header {
 	flex-grow: 1;
 	min-width: 100%;
+	min-height: 20%;
+	max-height: 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -400,6 +412,7 @@ input:-webkit-autofill:active {
 .future-day .future-temp {
 	font-size: 1.5rem;
 	min-width: 100%;
+	min-height: 3rem;
 	text-align: center;
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
@@ -433,6 +446,10 @@ input:-webkit-autofill:active {
 	* {
 		font-size: calc(0.50rem + 0.75vw);
 		box-sizing: border-box;
+	}
+
+	.container {
+		gap: 0.7vh;
 	}
 
 	.input-container {

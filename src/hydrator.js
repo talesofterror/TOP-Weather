@@ -16,11 +16,11 @@ export function hydrate (elements, report, error = false, promiseCatch = undefin
 		elements.present.humidity.textContent = report.currentConditions.humidity
 
 		// future
-		let futureDate1 = Date(report.days[0].datetime)
+		let futureDate1 = new Date(report.days[0].datetime)
 		elements.future[0].header.textContent = format(futureDate1, "MMMM do, yyyy")
 		elements.future[0].icon.append(getIcon(elements.future[0].icon, report.days[0].icon))
 		elements.future[0].temp.textContent = report.days[0].temp
-		let futureDate2 = Date(report.days[1].datetime)
+		let futureDate2 = new Date(report.days[1].datetime)
 		elements.future[1].header.textContent = format(futureDate2, "MMMM do, yyyy")
 		elements.future[1].icon.append(getIcon(elements.future[1].icon, report.days[1].icon))
 		elements.future[1].temp.textContent = report.days[1].temp

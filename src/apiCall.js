@@ -29,14 +29,14 @@ export async function getReport (query, testRun = false, mode = {mode: 'cors'}) 
 			},
 			days: [
 				{
-					datetime: json.days[1].datetime,
-					temp: json.days[1].temp,
-					icon: json.days[1].icon
-				},
-				{
 					datetime: json.days[2].datetime,
 					temp: json.days[2].temp,
 					icon: json.days[2].icon
+				},
+				{
+					datetime: json.days[3].datetime,
+					temp: json.days[3].temp,
+					icon: json.days[3].icon
 				}
 			]	
 		}
