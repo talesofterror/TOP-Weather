@@ -1,5 +1,3 @@
-import {getReport} from './apiCall.js'
-import { elements } from "./elements.js"
 import {format} from "date-fns"
 
 export function hydrate (elements, report, error = false, promiseCatch = undefined) {
