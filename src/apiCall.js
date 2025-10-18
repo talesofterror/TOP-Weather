@@ -6,10 +6,15 @@ let weatherRequestUrl = (query) => `https://weather.visualcrossing.com/VisualCro
 	+ query
 	+ `?unitGroup=us&key=GKRUZWJ6T7MMYA9ZMP78HA9DL&contentType=json&iconsSet=icons2`
 
+let forceError = true
+
 export async function getReport (query, testRun = false, mode = {mode: 'cors'}) {
 	let response
 	let json
 	try {
+		if (forceError) {
+			throw "nope"
+		}
 		if (!testRun) {
 			response = await fetch(weatherRequestUrl(query), mode)
 			console.log("live request (o_o;)")
@@ -47,7 +52,6 @@ export async function getReport (query, testRun = false, mode = {mode: 'cors'}) 
 		console.log(json)
 		console.log("error: ")
 		initErrorDisplay(elements)
-		hydrate(null, null, true, e)
 		return {}
 		// throw new Error(e)
 	}

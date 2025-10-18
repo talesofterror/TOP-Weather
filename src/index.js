@@ -3,9 +3,9 @@ import { elements } from "./elements.js"
 import { hydrate } from "./hydrator.js"
 import "./style.css"
 
-let isATest = ()=> false
+let isATest = ()=> true
 
-hydrate(elements, await getReport("Philadelphia", isATest()))
+hydrate(elements, await getReport("ffffff", isATest()))
 
 elements.form.addEventListener("submit", async (e)=> {
 	e.preventDefault()
