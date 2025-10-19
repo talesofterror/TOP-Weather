@@ -35,11 +35,11 @@ export function hydrate (elements, report, promiseCatch = undefined) {
 			.then( (s) => presentIcon.src = s.default )
 		return presentIcon
 	}
-
 }
 
 export function toggleErrorDisplay (elements) {
 	elements.errorMessage.classList.toggle("display-none")
-	elements.container.classList.toggle("blur")
+	elements.presentContainer.classList.toggle("blur")
+	elements.futureContainer.classList.toggle("blur")
 	elements.inputLocation.focus()
 }

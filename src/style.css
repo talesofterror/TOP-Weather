@@ -52,9 +52,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
-	/* min-width: 50%; */
-	min-width: 40vw;
-	max-width: fit-content;
+	min-width: 30%;
 	max-height: 100vh;
 	margin: auto;
 	margin-top: 2rem;
@@ -62,6 +60,9 @@ body {
 }
 
 #error-message {
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
 	position: absolute;
 	background-color: var(--highlight);
 	border: var(--error) 5px solid;
@@ -70,9 +71,11 @@ body {
 	min-height: 5rem;
 	margin: 10rem 0 0 0;
 	padding: 0;
+	padding-bottom: 0.5rem;
 	align-self: center;
 	justify-self: center;
 	overflow: hidden;
+	z-index: 1;
 }
 
 .error-message-header {
@@ -80,12 +83,24 @@ body {
 	background-color: var(--error); 
 	color: var(--highlight);
 	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	height: 2rem;
 }
 
 #error-message-text {
+	font-size: 1.5rem;
 	color: var(--error);
 	text-align: center;
 	padding: 1rem;
+}
+
+#error-ok {
+	border-radius: 10rem;
+	background-color: var(--primary-bg);
+	width: fit-content;
+	padding: 0.5rem;
+	justify-self: center;
 }
 
 .container-item {
@@ -213,9 +228,12 @@ input:-webkit-autofill:active {
 	width: 100%;
 	margin-bottom: 0.5rem;
 }
+.present-header {
+}
 
 #present-location {
 	position: relative;
+	min-height: 1rem;
 	display: flex;
 	justify-content: center;
 	background-color: var(--highlight);
@@ -226,6 +244,7 @@ input:-webkit-autofill:active {
 
 #present-date {
 	display: flex;
+	min-height: 1rem;
 	justify-content: center;
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
@@ -376,6 +395,7 @@ input:-webkit-autofill:active {
 .present-humid-value {
 	text-align: center;
 	font-size: 2rem;
+	min-height: 2rem;
 	background-color: var(--accent-bg);
 	color: var(--accent-text);
 	border-radius: 0 0 1rem 1rem;
@@ -385,6 +405,7 @@ input:-webkit-autofill:active {
 .future-conditions {
 	flex-grow: 2;
 	display: flex;
+	position: relative;
 	flex-direction: row;
 	justify-content: space-around;
 	gap: 1rem;
@@ -464,6 +485,10 @@ input:-webkit-autofill:active {
 	filter: blur(4px);
 }
 
+.flex {
+	display: flex;
+}
+
 @media only screen and (max-width: 767px) {
 
 	:root {
@@ -475,16 +500,49 @@ input:-webkit-autofill:active {
 		box-sizing: border-box;
 	}
 
+	body {
+		height: fit-content;
+		padding-top: 2rem;
+	}
+	
 	.container {
+		height: fit-content;
 		gap: 0.7vh;
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+		min-width: 90%;
+	}
+
+	#error-message {
+		margin-top: 1rem;
+	}
+
+	.error-button-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
 	}
 
 	.input-container {
 		display: flex;
 		width: 100%;
 	}
-	.input-container * {
-		flex-grow: 1;
+	label {
+		width: 30%;
+	}
+	.input-label {
+		font-size: 0.8rem;
+		width: 100%;
+		white-space: nowrap;
+	}
+	input {
+		width: 70%;
+	}
+
+	.error-ok {
+		align-self: center;
 	}
 
 	.present-conditions {

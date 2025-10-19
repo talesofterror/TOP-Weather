@@ -5,7 +5,7 @@ import "./style.css"
 
 let isATest = ()=> false
 
-hydrate(elements, await getReport("ffffff", isATest()))
+hydrate(elements, await getReport("Philadelphia", isATest()))
 
 elements.form.addEventListener("submit", async (e)=> {
 	e.preventDefault()

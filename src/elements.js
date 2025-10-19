@@ -1,6 +1,8 @@
 
 export const elements = {
 	container: document.getElementById("container"),
+	presentContainer: document.getElementById("present-container"),
+	futureContainer: document.getElementById("future-container"),
 	form: document.getElementById("query"),
 	inputLocation: document.getElementById("input-location"),
 	errorMessage: document.getElementById("error-message"),

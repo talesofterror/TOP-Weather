@@ -10,7 +10,7 @@
 	<body>
 
 		<div class="container" id="container">
-			<div class="present-conditions container-item">
+			<div class="present-conditions container-item" id="present-container">
 				<div class="input-container"><form action="/apiquery" id="query"><label for="input-location"><div class="input-label font-main">Set location: </div></label><input type="text" id="input-location" class="font-accent" placeholder="enter a location"></form></div>
 				<div class="present-main">
 					<div class="present-header-container">
@@ -44,12 +44,12 @@
 
  <!-- ERROR MESSAGE -->
 			<div id="error-message" class="display-none">
-				<div class="error-message-header">ERROR!</div>
-				<div id="error-message-text">NOT LIKE THAT!!!</div>
-				<div id="error-ok">Okay...</div>
+				<div class="error-message-header font-accent">ERROR!</div>
+				<div id="error-message-text" class="font-main">NOT LIKE THAT!!!</div>
+				<div class="error-button-container"><div id="error-ok" class="font-main">Okay...</div></div>
 			</div>
 
-			<div class="future-conditions container-item">
+			<div class="future-conditions container-item" id="future-container">
 				<div class="future-day">
 					<div class="future-header font-main" id="future-1-header"></div>
 					<div id="future-1-icon" class="future-icon"><img alt="" id="future-1-icon-img"></div>
@@ -62,6 +62,7 @@
 				</div>
 
 			</div>
+			<div class="links" style="width: 100%;display:flex;justify-content:center;"><a href="https://github.com/talesofterror/TOP-Weather"><img src="./assets/github.svg" style="height:2rem;filter:brightness(60%);opacity:20%;mix-blend-mode:color-burn"></a></div>
 			
 		</div>
 
