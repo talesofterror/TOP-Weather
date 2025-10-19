@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div class="container">
+		<div class="container" id="container">
 			<div class="present-conditions container-item">
 				<div class="input-container"><form action="/apiquery" id="query"><label for="input-location"><div class="input-label font-main">Set location: </div></label><input type="text" id="input-location" class="font-accent" placeholder="enter a location"></form></div>
 				<div class="present-main">
@@ -42,7 +42,12 @@
 				</div>
 			</div>
 
-			<div id="error-message" class="display-none"><div>NOT LIKE THAT!!!</div></div> <!-- ERROR MESSAGE -->
+ <!-- ERROR MESSAGE -->
+			<div id="error-message" class="display-none">
+				<div class="error-message-header">ERROR!</div>
+				<div id="error-message-text">NOT LIKE THAT!!!</div>
+				<div id="error-ok">Okay...</div>
+			</div>
 
 			<div class="future-conditions container-item">
 				<div class="future-day">

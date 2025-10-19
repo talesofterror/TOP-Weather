@@ -1,9 +1,9 @@
 import { getReport } from "./apiCall.js"
 import { elements } from "./elements.js"
-import { hydrate } from "./hydrator.js"
+import { hydrate, toggleErrorDisplay } from "./hydrator.js"
 import "./style.css"
 
-let isATest = ()=> true
+let isATest = ()=> false
 
 hydrate(elements, await getReport("ffffff", isATest()))
 
@@ -22,5 +22,8 @@ document.addEventListener("keyup", (e) => {
 		default:
 			return
 	}
+})
+elements.errorOk.addEventListener( "click", ()=> {
+	toggleErrorDisplay(elements)
 })
 

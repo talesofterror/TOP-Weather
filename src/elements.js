@@ -1,8 +1,12 @@
 
 export const elements = {
+	container: document.getElementById("container"),
 	form: document.getElementById("query"),
 	inputLocation: document.getElementById("input-location"),
 	errorMessage: document.getElementById("error-message"),
+	errorMessageText: document.getElementById("error-message-text"),
+	errorOk: document.getElementById("error-ok"),
+
 	present: {
 		date: document.getElementById("present-date"),
 		location: document.getElementById("present-location"),

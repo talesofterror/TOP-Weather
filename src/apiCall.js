@@ -1,6 +1,6 @@
 import testData from "./assets/weatherRefData.json"
 import { elements } from "./elements"
-import { hydrate, initErrorDisplay } from "./hydrator"
+import { hydrate, toggleErrorDisplay } from "./hydrator"
 
 let weatherRequestUrl = (query) => `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/`
 	+ query
@@ -51,7 +51,7 @@ export async function getReport (query, testRun = false, mode = {mode: 'cors'}) 
 		console.log("json:")
 		console.log(json)
 		console.log("error: ")
-		initErrorDisplay(elements)
+		toggleErrorDisplay(elements)
 		return {}
 		// throw new Error(e)
 	}

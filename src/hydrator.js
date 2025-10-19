@@ -3,6 +3,7 @@ import {format} from "date-fns"
 export function hydrate (elements, report, promiseCatch = undefined) {
 	console.log(report.hasOwnProperty("currentConditions"))
 	if (report.hasOwnProperty("currentConditions")) {
+
 		// present
 		let presentDate = report.currentConditions.datetime ? new Date(report.currentConditions.datetime * 1000) : new Date()
 		elements.present.date.textContent = format(presentDate, "MMMM do, yyyy")
@@ -37,9 +38,8 @@ export function hydrate (elements, report, promiseCatch = undefined) {
 
 }
 
-export function initErrorDisplay (elements) {
+export function toggleErrorDisplay (elements) {
 	elements.errorMessage.classList.toggle("display-none")
-	elements.errorMessage.classList.toggle("display-absolute")
-	elements.inputLocation.value = ""
+	elements.container.classList.toggle("blur")
 	elements.inputLocation.focus()
 }
