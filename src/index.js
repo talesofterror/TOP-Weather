@@ -3,13 +3,14 @@ import { elements } from "./elements.js"
 import { hydrate, toggleErrorDisplay } from "./hydrator.js"
 import "./style.css"
 
-let isATest = ()=> false
+let isATest = ()=> true
 
 hydrate(elements, await getReport("Philadelphia", isATest()))
 
 elements.form.addEventListener("submit", async (e)=> {
 	e.preventDefault()
 	hydrate(elements, await getReport(document.getElementById("input-location").value, isATest()))
+	elements.inputLocation.blur()
 })
 document.addEventListener("keyup", (e) => {
 	switch (e.key) {
@@ -18,11 +19,13 @@ document.addEventListener("keyup", (e) => {
 			break;
 		case "Escape": 
 			document.activeElement.blur()
-			break
+			break;
+
 		default:
 			return
 	}
 })
+
 elements.errorOk.addEventListener( "click", ()=> {
 	toggleErrorDisplay(elements)
 })

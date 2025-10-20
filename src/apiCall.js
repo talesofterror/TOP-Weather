@@ -6,7 +6,7 @@ let weatherRequestUrl = (query) => `https://weather.visualcrossing.com/VisualCro
 	+ query
 	+ `?unitGroup=us&key=GKRUZWJ6T7MMYA9ZMP78HA9DL&contentType=json&iconsSet=icons2`
 
-let forceError = true
+let forceError = false
 
 export async function getReport (query, testRun = false, mode = {mode: 'cors'}) {
 	let response

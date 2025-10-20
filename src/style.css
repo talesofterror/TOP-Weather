@@ -29,6 +29,10 @@
 	font-style: normal;
 }
 
+html {
+	background-color: var(--main-bg);
+}
+
 body {
 	/* font-family: 'Times New Roman', Times, serif; */
 	appearance: none;
@@ -37,6 +41,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-image: url("./assets/background.png");
+	background-size: cover;
+	
 	background-color: var(--main-bg);
 	color: var(--primary-text);
 	padding: 0;
@@ -51,9 +58,12 @@ body {
 	font-size: 16px;
 	display: flex;
 	flex-direction: column;
+	/* align-items: center; */
+	/* justify-content: center; */
 	width: fit-content;
 	min-width: 30%;
-	max-height: 100vh;
+	max-width: fit-content;
+	max-height: 100%;
 	margin: auto;
 	margin-top: 2rem;
 	gap:1rem;
@@ -69,7 +79,7 @@ body {
 	border-radius: 1rem;
 	width: 50%;
 	min-height: 5rem;
-	margin: 10rem 0 0 0;
+	margin: 5rem 0 0 0;
 	padding: 0;
 	padding-bottom: 0.5rem;
 	align-self: center;
@@ -193,7 +203,7 @@ input:-webkit-autofill:active {
 #present-date,#present-temp,
 #present-tempmax,#present-tempmin,
 #present-humidity {
-	color: var(--highlight);
+	color: var(--accent-text);
 }
 
 .present-conditions {
@@ -205,6 +215,8 @@ input:-webkit-autofill:active {
 	justify-content:center;
 	min-height: 20rem;
 	/* max-height: fit-content; */
+	min-width: 100%;
+	max-width: 30rem;
 	background-color: var(--primary-bg);
 	border: 3px solid var(--accent-bg);
 	border-radius: 1.5vw;
@@ -409,6 +421,7 @@ input:-webkit-autofill:active {
 	flex-direction: row;
 	justify-content: space-around;
 	gap: 1rem;
+	min-width: 100%;
 }
 
 .future-day {
@@ -489,6 +502,33 @@ input:-webkit-autofill:active {
 	display: flex;
 }
 
+@media only screen and (max-height: 768px) {
+
+	:root {
+		font-size: 12px;
+	}
+
+	* {
+		font-size: calc(0.50rem + 0.75vw);
+		letter-spacing: 0.05rem;
+		box-sizing: border-box;
+	}
+}
+
+
+@media only screen and (max-height: 1080px) {
+
+	:root {
+		font-size: 18px;
+	}
+
+	* {
+		font-size: calc(0.50rem + 0.75vw);
+		letter-spacing: 0.05rem;
+		box-sizing: border-box;
+	}
+}
+
 @media only screen and (max-width: 767px) {
 
 	:root {
@@ -497,6 +537,7 @@ input:-webkit-autofill:active {
 
 	* {
 		font-size: calc(0.50rem + 0.75vw);
+		letter-spacing: 0.05rem;
 		box-sizing: border-box;
 	}
 
@@ -550,6 +591,15 @@ input:-webkit-autofill:active {
 		border-radius: 1.5rem;
 	}
 
+	.present-header,.present-temp-header,.present-humid-header,
+	#present-conditions {
+		font-size: 0.8rem;
+	}
+
+	.present-conditions,.future-conditions,.container {
+		max-width: 100%;
+	}
+
 	.present-main {
 		flex-grow: 2;
 		min-width: 60%;
@@ -574,5 +624,9 @@ input:-webkit-autofill:active {
 /* temp range value */
 	.present-temp-range-item div:last-child {
 		font-size: 1rem;
+	}
+
+	.font-accent {
+		font-weight: 900;
 	}
 }
