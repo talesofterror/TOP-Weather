@@ -43,7 +43,7 @@ body {
 	justify-content: center;
 	background-image: url("./assets/background.png");
 	background-size: cover;
-	
+	background-repeat: repeat;
 	background-color: var(--main-bg);
 	color: var(--primary-text);
 	padding: 0;
@@ -574,7 +574,7 @@ input:-webkit-autofill:active {
 		width: 30%;
 	}
 	.input-label {
-		font-size: 0.8rem;
+		font-size: 0.65rem;
 		width: 100%;
 		white-space: nowrap;
 	}
