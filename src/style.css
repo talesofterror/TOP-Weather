@@ -41,7 +41,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: url("./assets/background.png");
+	background-image: url("./assets/background2.jpg");
 	background-size: cover;
 	background-repeat: repeat;
 	background-color: var(--main-bg);
@@ -504,7 +504,7 @@ input:-webkit-autofill:active {
 	display: flex;
 }
 
-@media only screen and (max-height: 768px) and (width <= 1361px) {
+@media only screen and (max-height: 768px) and (min-width: 800px) {
 	/**/
 	/* :root { */
 	/* 	font-size: 3px; */
@@ -556,7 +556,7 @@ input:-webkit-autofill:active {
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (min-height: width) {
 
 	:root {
 		font-size: 20px;
@@ -574,6 +574,7 @@ input:-webkit-autofill:active {
 	}
 	
 	.container {
+		flex-direction: column;
 		height: fit-content;
 		gap: 0.7vh;
 		margin-top: 0;
