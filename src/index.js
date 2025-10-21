@@ -3,7 +3,7 @@ import { elements } from "./elements.js"
 import { hydrate, toggleErrorDisplay } from "./hydrator.js"
 import "./style.css"
 
-let isATest = ()=> true
+let isATest = ()=> false
 
 hydrate(elements, await getReport("Philadelphia", isATest()))
 
